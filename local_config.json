@@ -1,0 +1,22 @@
+{
+	"general": {},
+	"ios": {
+		"profiles": {
+			"DEFAULT": {
+				"provisioning_profile": "/home/nick/Downloads/Food_Stops_Dev_Profile.mobileprovision",
+				"developer_certificate_path": "/home/nick/Downloads/certificate_with_key.p12",
+				"developer_certificate_password": "Stabbing12!@"
+			}
+		},
+		"simulatorsdk": "8.0",
+		"simulatorfamily": "iphone",
+		"simulatorvariant": "default",
+		"devicetypeid": "com.apple.CoreSimulator.SimDeviceType.iPhone-6",
+		"device": "device"
+	},
+	"android": {
+		"profiles": {
+			"DEFAULT": {}
+		}
+	}
+}
