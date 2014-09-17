@@ -3,7 +3,7 @@
 	"name": "trigger-ios-bug",
 	"author": "brian@axceron.com",
 	"version": "0.1",
-	"platform_version": "v2.1.9",
+	"platform_version": "v2.2.3",
 	"description": "An empty app created by default",
 	"core": {
 		"general": {
@@ -15,8 +15,25 @@
 		"ios": {
 			"minimum_version": "6.0",
 			"device_family": "any",
-			"package_name": "com.foodstops.ios"
+			"package_name": "com.foodstops.ios",
+			"webview": "UIWebView"
 		}
 	},
-	"modules": {}
+	"modules": {
+		"display": {
+			"version": "2.4",
+			"config": {
+				"fullscreen": {
+					"ios7": "no-statusbar",
+					"android": true,
+					"ios": true
+				},
+				"orientations": {
+					"ipad": "portrait",
+					"android": "portrait",
+					"iphone": "portrait"
+				}
+			}
+		}
+	}
 }

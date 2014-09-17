@@ -4,50 +4,46 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="initial-scale=1">
 		<script src="js/jquery-2.0.2.js"></script>
-		<script src="js/bootstrap.js"></script>
+		<script src="js/foundation.js"></script>
+		<script src="js/handlebars-v2.0.0.js"></script>
 		<script src="js/main.js"></script>
-		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/foundation.css" rel="stylesheet">
 		<style type="text/css">
-			.container-narrow {
-				margin: 0 auto;
-				max-width: 700px;
-				padding: 20px;
-			}
-			.container-narrow > hr {
-				margin: 30px 0;
-			}
-
-			.jumbotron {
-				margin: 60px 0;
-				text-align: center;
-			}
-			.jumbotron h1 {
-				font-size: 50px;
-				line-height: 1;
+			.full-height {
+                        	height: 100%;
+                        }
+			#content{
+    				bottom: 0;
+    				position: fixed;
+    				overflow-x: hidden;
+    				overflow-y: auto;
+    				top: 0;
+    				width: 100%;
 			}
 
 			p {
 				font-size: 1.2em;
 			}
+			
+			body {
+				background-color: #555;
+			}
 		</style>
 	</head>
-	<body>
-		<div class="navbar navbar-static-top navbar-inverse">
-			<div class="navbar-inner">
-				<div class="container-fluid">
-					<a class="brand" href="#">Example app</a>
-				</div>
-			</div>
-		</div>
-		<div class="container-narrow">
-			<div class="jumbotron">
-				<h1><a>Step 2: Click here for death</a></h1>
-				<input type="text" placeholder="Step 1) Bring up the iOS Form Assistant" />
-				<input type="text" placeholder="Step 1) Bring up the iOS Form Assistant" />
-				<input type="text" placeholder="Step 1) Bring up the iOS Form Assistant" />
+        <script id="main-template" type="text/x-handlebars-template">
+		<div class="off-canvas-wrap full-height">
+			<div class="inner-wrap full-height">
+			<div id="content">
+                        <div class="row">
+				<h1><a><img src="death.jpeg">Step 2: Click here for death</a></h1>
+				<form>
+					<input type="text" placeholder="Step 1) Bring up the iOS Form Assistant" />
+					<input type="text" placeholder="Step 1) Bring up the iOS Form Assistant" />
+					<input type="text" placeholder="Step 1) Bring up the iOS Form Assistant" />
+				</form>
 			</div>
 			<hr>
-			<div class="row-fluid">
+			<div class="row">
 				<div class="span12">
 					<h4>Getting started</h4>
 					<p>To get started with Forge the best place to look is our <a href="https://trigger.io/docs/current/index.html">documentation</a>. We also regularly post tips and updates to our <a href="http://trigger.io/cross-platform-application-development-blog/">blog</a>.</p>
@@ -59,6 +55,17 @@
 					<p>If you run into problems you can ask a question on our <a href="http://stackoverflow.com/questions/tagged/trigger.io">StackOverflow tag</a>, or <a href="mailto:support@trigger.io">send us an email</a>.</p>
 				</div>
 			</div>
+			</div>
 		</div> 
+	</script>
+	<body>
+	<h1>YOLO</h1>
 	</body>
+	<script>
+	$(function() {
+          var source = $("#main-template").html();
+          var template = Handlebars.compile(source);
+          $("body").html(template({}));
+        });
+	</script>
 </html>
